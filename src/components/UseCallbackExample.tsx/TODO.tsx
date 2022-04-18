@@ -1,7 +1,10 @@
+import { memo } from "react";
+
 interface TOROProps {
   todos: string[];
   addTodo: VoidFunction;
 }
+
 function TODO({ todos, addTodo }: TOROProps) {
   console.log("TODO RE-RENDER");
   return (
@@ -17,4 +20,4 @@ function TODO({ todos, addTodo }: TOROProps) {
   );
 }
 
-export default TODO
+export default memo(TODO)
